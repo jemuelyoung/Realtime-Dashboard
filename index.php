@@ -4,8 +4,7 @@
 		<meta charset="UTF-8">
 				<script src="./includes/jquery.min.js"></script>
 		<script src="http://23.23.183.118:4000/socket.io/socket.io.js"></script>
-		<script src="client.js"></script>
-	
+		<script src="client.js"></script>	
 		<script type="text/javascript" src="./includes/smoothie.min.js"></script>
 		
 		<title></title>
@@ -17,6 +16,10 @@
 			h1 {
 				color: red;
 				font-size: 30px;
+			}
+			h2 {
+				color: orange;
+				font-size: 28px;
 			}
 			.visitors {
 				color: green;
@@ -43,12 +46,14 @@
 			<hr />
 			<br />
 			
+			<h2 id='loadHeader'></h2>
+
+			<br />
+			<br />
+			<!-- <canvas id="mycanvas" width="400" height="100"></canvas> -->
+			<br />
+			<br />
 			
-
-			<br />
-			<br />
-			<canvas id="mycanvas" width="400" height="100"></canvas>
-
 		</center>
 	</body>
 	<script type="text/javascript">

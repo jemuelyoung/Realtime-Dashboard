@@ -1,8 +1,13 @@
 $(document).ready(function() {
-	var visitors = $('#numVisitors'), socket;	
+	var visitors = $('#numVisitors'), socket,
+	load = $('#loadHeader');	
 	// updates all clients with the current number of visitors
 	updateCount = function(numVisitors){
 		visitors.html(numVisitors);
+	};
+	
+	updateLoad = function(data){
+		load.html(data);
 	};
 	
 	// Connect socket and set up all the packet handlers
@@ -17,4 +22,5 @@ $(document).ready(function() {
 	// Set up the handlers
 	socket.on('visitorConnect', updateCount);
 	socket.on('visitorDisconnect', updateCount);
+	socket.on('update_load', updateLoad);
 }); 
