@@ -39,12 +39,12 @@ Statistics.prototype.cpuLoad = function() {
 	// {$4} : 1  average over the last minute
 	// {$5} : 1  average over the 5 minutes
 	// {$6} : 1  average over the 15 minutes
-	exec("sar -q 1 3 |grep \"Average\"|awk -F \" \" '{ print $4 }'", function(error, stdout, stderr) {
+	exec("sar -q 1 3 |grep \"Average\"|awk -F \" \" '{ print $4,$5 }'", function(error, stdout, stderr) {
 		// divide the load by the number of processors in case of multi-core system
-		var loadAvg = stdout/numProcessors;
+	//	var loadAvg = stdout/numProcessors;
 		//console.log('stdout: ' + stdout);
 		
-		self.emit('current_load', loadAvg);
+		self.emit('current_load', stdout);
 		if (error !== null) {
 			console.log('exec error: ' + error);
 		}
@@ -56,7 +56,7 @@ var stats = new Statistics();
 // get new data every 3 seconds
 setInterval(function() {
 	stats.cpuLoad();
-}, 3000);
+}, 1000);
 
 stats.on('current_load', function(data) {
 //	console.log(data);
