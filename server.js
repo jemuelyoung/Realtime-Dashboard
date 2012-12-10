@@ -19,7 +19,6 @@ setInterval(function() {
 }, 1000);
 
 Statistics.on('current_load', function(data) {
-//	console.log(data);
 	io.sockets.emit('update_load', data)
 
 });

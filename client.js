@@ -49,7 +49,8 @@ setInterval(function() {
 }, 1000);
 
 $(document).ready(function() {
-	var visitors = $('#numVisitors'), socket, load1 = $('#load1Header'), load2 = $('#load2Header');
+	var visitors = $('#numVisitors'), socket, load1 = $('#load1Header'), load2 = $('#load2Header');
+
 	// updates all clients with the current number of visitors
 	updateCount = function(numVisitors) {
 		visitors.html(numVisitors);
@@ -79,7 +80,6 @@ $(document).ready(function() {
 	socket.on('visitorDisconnect', updateCount);
 	socket.on('update_load', updateLoad);
 
-	// Data
 
 });
 
