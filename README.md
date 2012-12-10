@@ -9,5 +9,5 @@ To install:
 	
 Some useful examples: http://www.thegeekstuff.com/2011/03/sar-examples/
 
-Install socket.io
+Install socket.io:
 ```npm install socket.io```
