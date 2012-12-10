@@ -82,24 +82,6 @@
 		<br />
 		<table class="content">
 			<tr>
-			<th align="center">Server #1 Status</th>
-			<th align="center">Server #2 Status</th>
-			<th align="center">Server #3 Status</th>
-				
-			</tr>
-			<tr>
-				<td class="center_33">
-					<div id="ss_1" class="fill_server_status_online">ONLINE</div>
-				</td>
-				<td class="center_33">
-					<div id="ss_2" class="fill_server_status_online">ONLINE</div>
-				</td>
-				<td class="center_33">
-					<div id="ss_3" class="fill_server_status_online">ONLINE</div>
-				</td>
-			
-			</tr>
-			<tr>
 				<td>
 				<br /></td>
 			</tr>
