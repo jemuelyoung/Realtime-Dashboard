@@ -1,5 +1,5 @@
 var io = require('socket.io').listen(4000);
-var Statistics = require('./statistics.js')
+var Statistics = require('./includes/statistics.js')
 var visitors = 0, load;
 
 io.enable('browser client minification');
