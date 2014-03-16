@@ -12,10 +12,6 @@ Some useful examples: http://www.thegeekstuff.com/2011/03/sar-examples/
 Install socket.io:
 ```npm install socket.io```
 
-Demo
----
-http://www.really-bored.com
-
 
 Todo
 -----
